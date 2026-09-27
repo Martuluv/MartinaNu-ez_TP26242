@@ -7,7 +7,7 @@ export const Item = ({ name, price, description, image, children }) => {
       <p>{description}</p>
       <p>${price}</p>
 
-      {/* Puedo usar children y reutilizar este componente!!!! */}
+      {/* Podemos usar children y reutilizar este componente */}
       {children}
     </article>
   );
