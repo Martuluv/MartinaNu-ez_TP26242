@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "conjunto de limo",
+    "description": "Conjunto de dos piezas en color lima, compuesto por un top corto y una falda ajustada. Ideal para un look veraniego y fresco.",
+    "price": 12500,
+    "image": "/img/footware/ouffit1.jpg",
+    "category": "femenino"
+  },
+  {
+    "id": 2,
+    "name": "vestido italy",
+    "description": "Vestido de verano en tela ligera y color hueso. Diseño elegante con detalles de encaje y cinturón ajustable para un look sofisticado.",
+    "price": 12500,
+    "image": "/img/footware/ouffit2.jpg",
+    "category": "femenino"
+  },
+  {
+    "id": 3,
+    "name": "chaqueta roma",
+    "description": "Chaqueta de cuero texturizado en color azul. Diseño moderno con detalles de cierre y forro acolchado para un look elegante y cálido.",
+    "price": 28900,
+    "image": "/img/footware/ouffit3.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 4,
+    "name": "sweet gildis",
+    "description": "Suéter de lana en color suave con diseño de punto grueso. Ideal para combinar con jeans o faldas para un look casual y acogedor.",
+    "price": 35000,
+    "image": "/img/footware/ouffit4.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 5,
+    "name": "chaleco paris",
+    "description": "Chaleco de lana en color suave con diseño de punto grueso. Ideal para combinar con camisas o blusas para un look casual y acogedor.",
+    "price": 38000,
+    "image": "/img/footware/ouffit5.jpg",
+    "category": "unisex"
+  }
+]
