@@ -12,7 +12,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/cart" element={<h1>Carrito</h1>} />
+          <Route path="/cart" element={<CartView />} />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
           {/* opcional: filtro por categorias */}
           <Route path="/category/:category" element={<ItemListContainer />} />
