@@ -47,7 +47,7 @@ export const CartProvider = ({ children }) => {
     setCart(updatedCart);
     alert("Producto eliminado ✅");
 
-    //comentario de belÜ
+    //comentario de belÜ para guiarme
     //Forma funcional "prev"
     //setCart((prev) => prev.filter((element) => element.id !== id));
   };

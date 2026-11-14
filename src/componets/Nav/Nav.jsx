@@ -13,8 +13,10 @@ export const Nav = () => {
           <Link to={"/"}>Home</Link>
         </li>
         <li>
-          <Link to={"/cart"}>Carrito</Link>
-          <span className="incart">{totalItems}</span>
+          <Link to={"/cart"}>
+            Carrito
+            {totalItems > 0 && <span className="incart">{totalItems}</span>}
+          </Link>
         </li>
       </ul>
     </nav>
