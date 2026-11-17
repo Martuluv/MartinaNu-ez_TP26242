@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { auth } from "../firebase/firebaseConfig";
+import { auth } from "../firebase/config";
 import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -9,7 +9,7 @@ import {
 const AuthContext = createContext();
 
 //custom hook
-export const useAouth = () => {
+export const useAuth = () => {
   const context = useContext(AuthContext);
 
   if (!context) {

@@ -4,6 +4,11 @@ import { ItemListContainer } from "./componets/ItemListContainer/ItemListContain
 import { ItemDetailContainer } from "./componets/ItemDetailContainer/ItemDetailContainer";
 import { CartView } from "./componets/Cart/CartView";
 import { ProductFormContainer } from "./componets/adminComponets/ProductForm/ProductFormContainer";
+
+import { ProtectedRoute } from "./componets/ProtectedRoute/ProtectedRoute";
+
+import { Dashboard } from "./componets/adminComponets/Dashboard/Dashboard";
+
 import { ProductSuccess } from "./componets/adminComponets/ProductSuccess";
 import { Login } from "./componets/Login/Login";
 import { AdminLayout } from "./layouts/AdminLayout";
@@ -32,7 +37,7 @@ function App() {
           }
         >
           {/* RUTAS ADMIN */}
-          <Route index element={<Navigate to={"Dashboard"} />} />
+          <Route index element={<Navigate to="/admin/Dashboard" replace />} />
           <Route path="Dashboard" element={<Dashboard />} />
           <Route path="products/new" element={<ProductFormContainer />} />
           <Route path="products/success/:id" element={<ProductSuccess />} />

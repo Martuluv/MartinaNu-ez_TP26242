@@ -5,7 +5,9 @@ import { Header } from "../componets/Header/Header";
 export const PublicLayout = () => {
   return (
     <main>
+      <Header />
       <Outlet />
+      <Footer />
     </main>
   );
 };
