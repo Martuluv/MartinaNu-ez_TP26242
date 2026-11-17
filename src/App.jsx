@@ -1,33 +1,43 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Footer } from "./componets/Footer/Footer";
-import { Header } from "./componets/Header/Header";
 import { ItemListContainer } from "./componets/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "./componets/ItemDetailContainer/ItemDetailContainer";
 import { CartView } from "./componets/Cart/CartView";
 import { ProductFormContainer } from "./componets/adminComponets/ProductForm/ProductFormContainer";
 import { ProductSuccess } from "./componets/adminComponets/ProductSuccess";
+import { Login } from "./componets/Login/Login";
+import { AdminLayout } from "./layouts/AdminLayout";
+import { PublicLayout } from "./layouts/PublicLayout";
 
 function App() {
   return (
     <>
-      <Header />
-      <main>
-        <Routes>
+      <Routes>
+        <Route element={<PublicLayout />}>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/cart" element={<CartView />} />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
           <Route path="/category/:category" element={<ItemListContainer />} />
+        </Route>
+        {/*importar el componente de login para el admin*/}
+        <Route path="/admin/login" element={<Login />} />
 
+        {/* -----------------------------ADMIN--------------------------- */}
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
           {/* RUTAS ADMIN */}
-          <Route path="/admin" element={<ProductFormContainer />} />
-          <Route
-            path="/admin/products/success/:id"
-            element={<ProductSuccess />}
-          />
-        </Routes>
-      </main>
-      <Footer />
+          <Route index element={<Navigate to={"Dashboard"} />} />
+          <Route path="Dashboard" element={<Dashboard />} />
+          <Route path="products/new" element={<ProductFormContainer />} />
+          <Route path="products/success/:id" element={<ProductSuccess />} />
+        </Route>
+      </Routes>
     </>
   );
 }
