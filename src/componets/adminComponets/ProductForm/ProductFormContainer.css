@@ -1,0 +1,146 @@
+.product-form {
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+
+  background: linear-gradient(145deg, #fff5fc, #f9eaff);
+
+  border: 2px solid #edc5f2;
+  border-radius: 26px;
+
+  box-shadow:
+    0 12px 30px rgba(190, 119, 210, 0.16),
+    0 4px 12px rgba(232, 155, 211, 0.12);
+}
+
+.product-form h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  color: #9b55b5;
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
+.product-form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.product-form label {
+  font-weight: 700;
+  color: #9252a8;
+  font-size: 0.95rem;
+}
+
+.product-form input[type="text"],
+.product-form input[type="number"],
+.product-form input[type="file"],
+.product-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+
+  background: #fffaff;
+  color: #54245f;
+
+  border: 1.5px solid #e8c4ef;
+  border-radius: 14px;
+
+  font: inherit;
+
+  transition: all 0.25s ease;
+}
+
+.product-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.product-form input:focus,
+.product-form textarea:focus {
+  outline: none;
+
+  border-color: #d77be9;
+
+  box-shadow: 0 0 0 4px rgba(215, 123, 233, 0.16);
+
+  background: #ffffff;
+}
+
+.product-form input::placeholder,
+.product-form textarea::placeholder {
+  color: #b58cbe;
+}
+
+.product-form input[type="file"] {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.product-form input[type="file"]::file-selector-button {
+  background: #f0d8f8;
+  color: #9252a8;
+
+  border: none;
+  border-radius: 20px;
+
+  padding: 0.55rem 1rem;
+  margin-right: 1rem;
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.product-form input[type="file"]::file-selector-button:hover {
+  background: #e5baf0;
+}
+
+.product-form img {
+  width: 220px;
+  max-width: 100%;
+
+  border-radius: 18px;
+  border: 2px solid #edc5f2;
+
+  margin-top: 0.7rem;
+
+  box-shadow: 0 5px 15px rgba(190, 119, 210, 0.15);
+}
+
+.product-form button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.95rem;
+
+  border-radius: 30px;
+  font-weight: 800;
+
+  transition: all 0.3s ease;
+}
+
+.product-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 16px rgba(190, 119, 210, 0.25);
+}
+
+.error {
+  margin-top: 0.2rem;
+  color: #c45c9e;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .product-form {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .product-form h2 {
+    font-size: 1.6rem;
+  }
+}

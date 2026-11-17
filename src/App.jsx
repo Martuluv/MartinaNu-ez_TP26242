@@ -5,6 +5,8 @@ import { Header } from "./componets/Header/Header";
 import { ItemListContainer } from "./componets/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "./componets/ItemDetailContainer/ItemDetailContainer";
 import { CartView } from "./componets/Cart/CartView";
+import { ProductFormContainer } from "./componets/adminComponets/ProductForm/ProductFormContainer";
+import { ProductSuccess } from "./componets/adminComponets/ProductSuccess";
 
 function App() {
   return (
@@ -15,13 +17,18 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/cart" element={<CartView />} />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
-          {/* opcional: filtro por categorias */}
           <Route path="/category/:category" element={<ItemListContainer />} />
+
+          {/* RUTAS ADMIN */}
+          <Route path="/admin" element={<ProductFormContainer />} />
+          <Route
+            path="/admin/products/success/:id"
+            element={<ProductSuccess />}
+          />
         </Routes>
       </main>
       <Footer />
     </>
   );
 }
-
 export default App;

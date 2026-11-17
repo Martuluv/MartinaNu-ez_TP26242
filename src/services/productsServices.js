@@ -1,7 +1,15 @@
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
 import { db } from "../firebase/config";
-import { collection } from "firebase/functions";
 
-const productsref = collection(db, "products");
+const productsRef = collection(db, "products");
 
 /* -------------------------------------------------------------------------- */
 /*                               TRAER PRODUCTOS                              */
@@ -66,6 +74,20 @@ export const getByCategory = async (category) => {
     return productsFormat;
   } catch (error) {
     console.error("Error al filtrar productos:", error);
+    throw error;
+  }
+};
+
+/* -------------------------------------------------------------------------- */
+/*                              ALTA DE PRODUCTO                              */
+/* -------------------------------------------------------------------------- */
+export const createProduct = async (productData) => {
+  try {
+    const docRef = await addDoc(productsRef, productData);
+
+    return docRef.id;
+  } catch (error) {
+    console.error("Error al crear producto:", error);
     throw error;
   }
 };

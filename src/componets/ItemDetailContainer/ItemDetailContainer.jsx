@@ -16,17 +16,8 @@ export const ItemDetailContainer = () => {
     setItemDetail(null);
     setLoading(true);
     setError(null);
-
-    fetch("/data/products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const item = data.find((product) => String(product.id) === id);
-        if (item) {
-          setItemDetail(item);
-          return;
-        }
-        throw new Error("Elemento no encontrado");
-      })
+    getProductById(id)
+      .then((item) => setItemDetail(item))
       .catch((error) => setError(error.message))
       .finally(() => setLoading(false));
   }, [id]);
