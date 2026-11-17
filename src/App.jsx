@@ -4,6 +4,7 @@ import { Footer } from "./componets/Footer/Footer";
 import { Header } from "./componets/Header/Header";
 import { ItemListContainer } from "./componets/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "./componets/ItemDetailContainer/ItemDetailContainer";
+import { CartView } from "./componets/CartView/CartView";
 
 function App() {
   return (
