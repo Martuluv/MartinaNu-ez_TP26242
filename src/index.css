@@ -5,23 +5,26 @@
 }
 
 :root {
-  --bg: #431047;
-  --surface: #1d0332;
-  --card: #3d0327;
-  --border: #03173e;
-  --text: #e5b7ec;
-  --text-secondary: #aecffd;
-  --disabled: #725497;
+  --bg: #fceeff;
+  --surface: #f7e1ff;
+  --card: #fff5fc;
+  --border: #e8b9ed;
 
-  --primary: #61adf4;
-  --primary-hover: #7ac4f6;
-  --success: #78ebeb;
-  --danger: #a64fad;
+  --text: #54245f;
+  --text-secondary: #a16bb0;
+  --disabled: #c5a5ce;
+
+  --primary: #d77be9;
+  --primary-hover: #c45cdd;
+
+  --success: #e9a3d5;
+  --danger: #c47bd8;
 }
+
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui, sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
 #root {
@@ -39,6 +42,8 @@ main {
 h1 {
   text-align: center;
   margin-bottom: 2rem;
+  color: #a044b5;
+  font-weight: 800;
 }
 
 img {
@@ -53,6 +58,11 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+  transition: 0.25s;
+}
+
+a:hover {
+  color: #c45cdd;
 }
 
 .primary {
@@ -80,34 +90,70 @@ a {
 }
 
 .btn {
-  border: none;
-  border-radius: 8px;
+  border: 1px solid transparent;
+  border-radius: 14px;
   padding: 0.7rem 1.3rem;
   cursor: pointer;
   font: inherit;
-  color: #360253;
-  transition: 0.25s;
-}
-.bg-success,
-.bg-delete {
-  color: rgb(212, 189, 251);
+  font-weight: 600;
+  color: white;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(170, 85, 190, 0.15);
 }
 
 .bg-primary:hover {
   background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.bg-success,
+.bg-delete {
+  color: white;
 }
 
 .bg-success:hover {
-  filter: brightness(0.9);
+  filter: brightness(0.95);
+  transform: translateY(-2px);
 }
 
 .bg-delete:hover {
   filter: brightness(0.9);
+  transform: translateY(-2px);
 }
 
 .btn:disabled {
   background: var(--disabled);
-  color: var(--text-secondary);
+  color: white;
   cursor: not-allowed;
   filter: none;
+  transform: none;
+  box-shadow: none;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(164, 94, 180, 0.1);
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: var(--text);
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.7rem;
+  outline: none;
+  transition: 0.25s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(215, 123, 233, 0.15);
 }

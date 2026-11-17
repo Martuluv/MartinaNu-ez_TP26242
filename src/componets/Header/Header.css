@@ -1,26 +1,63 @@
 header {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
+  background: #f7e1ff;
+  border-bottom: 2px solid #e8b9ed;
 
   padding: 1rem 3rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  box-shadow: 0 3px 12px rgba(164, 94, 180, 0.1);
 }
 
 .logo-container a {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.logo-container a:hover {
+  transform: translateY(-2px);
 }
 
 .logo-container img {
   width: 45px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-container a:hover img {
+  transform: rotate(-8deg) scale(1.08);
 }
 
 .logo-container span {
   font-size: 1.7rem;
-  font-weight: bold;
-  color: var(--text);
+  font-weight: 800;
+  color: #873b9b;
+  letter-spacing: 0.5px;
+  transition: color 0.25s ease;
+}
+
+.logo-container a:hover span {
+  color: #c45cdd;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 1.2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .logo-container img {
+    width: 38px;
+  }
+
+  .logo-container span {
+    font-size: 1.4rem;
+  }
 }

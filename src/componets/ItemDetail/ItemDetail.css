@@ -1,11 +1,28 @@
 .detail-wrapper {
   max-width: 20rem;
-  margin: auto;
+  margin: 2rem auto;
+  padding: 0.5rem;
 }
 
 .detail-wrapper .card p:first-of-type {
   display: block;
   overflow: visible;
   line-clamp: unset;
+  -webkit-line-clamp: unset;
   -webkit-box-orient: initial;
+
+  color: #94629f;
+  line-height: 1.6;
+}
+
+.detail-wrapper .card {
+  border: 1px solid #e8b9ed;
+  border-radius: 20px;
+  background: #fff5fc;
+  box-shadow: 0 6px 18px rgba(164, 94, 180, 0.13);
+}
+
+.detail-wrapper .card h3 {
+  color: #873b9b;
+  text-align: center;
 }
