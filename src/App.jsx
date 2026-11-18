@@ -13,7 +13,6 @@ import { ProductSuccess } from "./componets/adminComponets/ProductSuccess";
 import { Login } from "./componets/Login/Login";
 import { AdminLayout } from "./layouts/AdminLayout";
 import { PublicLayout } from "./layouts/PublicLayout";
-import { Register } from "./componets/Register/Register";
 
 function App() {
   return (
@@ -27,7 +26,6 @@ function App() {
         </Route>
         {/*importar el componente de login para el admin*/}
         <Route path="/admin/login" element={<Login />} />
-        <Route path="/admin/register" element={<Register />} />
 
         {/* -----------------------------ADMIN--------------------------- */}
         <Route
