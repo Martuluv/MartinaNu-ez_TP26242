@@ -3,6 +3,7 @@ import { auth } from "../firebase/config";
 import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
 //creamos el contexto
@@ -34,6 +35,9 @@ export const AuthProvider = ({ children }) => {
   const login = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
+  const register = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
 
   const logout = async () => {
     try {
@@ -44,8 +48,8 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, logout }}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider
+      value={{ user, loading, login, register, logout }}
+    ></AuthContext.Provider>
   );
 };
